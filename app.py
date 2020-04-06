@@ -11,8 +11,8 @@ CHANNEL_ACCESS_TOKEN = os.environ.get("CHANNEL_ACCESS_TOKEN")
 CHANNEL_SECRET = os.environ.get("CHANNEL_SECRET")
 
 app = Flask(__name__)
-line_bot_api = LineBotApi(CHANNEL_ACCESS_TOKEN)
-handler = WebhookHandler(CHANNEL_SECRET)
+line_bot_api = LineBotApi("i/BkxMCXNZjyVfvINPqkvioOxAG4JekP6kV7vKLExUvSKAlNqcVXHzgp6BCRzLhjE14qLGTjLLJNllP2UTN7hZJ0Nrp8sPWVqczZcofccXygaXyReZy1iL7yeRfGR7ri0I/XRn7LxuOLrde/XIXcqAdB04t89/1O/w1cDnyilFU=")
+handler = WebhookHandler("3af3a27eb3ce5ee3fbd3577e28df0920")
 
 
 @app.route("/callback", methods=['POST'])
@@ -39,4 +39,4 @@ def handle_text_message(event):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0')
